@@ -1,0 +1,25 @@
+type Query {
+  Book(id: ID): Book
+  Books: [Book]
+  Guns: [Gun]
+}
+
+type Book {
+  id: ID
+  name: String
+  pageCount: Int
+  author: Author
+}
+
+type Author {
+  id: ID
+  firstName: String
+  lastName: String
+  guns: [Gun]
+}
+
+type Gun {
+  id: ID
+  name: String
+  caliber: String
+}
